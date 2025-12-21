@@ -33,9 +33,12 @@ Nada: mesra, informatif
 
     const data = await response.json();
 
-    return res.json({
-      result: data.choices?.[0]?.message?.content || "Tiada output"
-    });
+console.log("DEBUG:", data); // <--- Tambah ini
+
+return res.json({
+  result: data.choices?.[0]?.message?.content || JSON.stringify(data)
+});
+
 
   } catch (err) {
     return res.status(500).json({ error: "Ralat server", details: err.message });
