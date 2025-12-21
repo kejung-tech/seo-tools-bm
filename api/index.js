@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
   res.send("SEO Tools BM API is running");
 });
 
-// Tambah route meta
+// Route meta description
 app.use("/api/meta", meta);
 
 app.listen(3000, () => console.log("✅ SEO Tools BM API running on port 3000"));
