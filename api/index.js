@@ -18,4 +18,8 @@ import title from "./title.js";
 
 app.use("/api/title", title);
 
+import keywords from "./keywords.js";
+
+app.use("/api/keywords", keywords);
+
 app.listen(3000, () => console.log("✅ SEO Tools BM API running on port 3000"));
