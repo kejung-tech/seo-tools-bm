@@ -26,7 +26,7 @@ Nada: mesra, informatif
         "Authorization": `Bearer ${process.env.GROQ_API_KEY}`
       },
       body: JSON.stringify({
-        model: "lllama3-8b",
+        model: "llama3-8b",
         messages: [{ role: "user", content: prompt }]
       })
     });
