@@ -1,13 +1,17 @@
 import express from "express";
 import cors from "cors";
+import meta from "./meta.js";
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Root
 app.get("/", (req, res) => {
   res.send("SEO Tools BM API is running");
 });
 
-app.listen(3000, () => console.log("✅ SEO Tools BM API running on port 3000"));
+// Tambah route meta
+app.use("/api/meta", meta);
 
+app.listen(3000, () => console.log("✅ SEO Tools BM API running on port 3000"));
