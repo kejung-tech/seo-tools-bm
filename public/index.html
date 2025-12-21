@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>SEO Tools BM</title>
-</head>
-<body>
-  <h1>SEO Tools Bahasa Melayu</h1>
-  <p>API sedang berjalan. UI penuh akan ditambah kemudian.</p>
-</body>
-</html>
-
+<script>
+  async function generateMeta() {
+    const res = await fetch("/api/meta", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        title: "Cara Buat Ayam Masak Merah",
+        keyword: "resepi ayam"
+      })
+    });
+    const data = await res.json();
+    console.log(data.result);
+  }
+</script>
