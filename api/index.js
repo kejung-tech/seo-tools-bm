@@ -14,4 +14,8 @@ app.get("/", (req, res) => {
 // Route meta description
 app.use("/api/meta", meta);
 
+import title from "./title.js"; 
+
+app.use("/api/title", title);
+
 app.listen(3000, () => console.log("✅ SEO Tools BM API running on port 3000"));
