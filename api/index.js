@@ -30,5 +30,9 @@ import outline from "./outline.js";
 
 app.use("/api/outline", outline);
 
+import og from "./og.js"; 
+
+app.use("/api/og", og);
+
 
 app.listen(3000, () => console.log("✅ SEO Tools BM API running on port 3000"));
