@@ -15,24 +15,22 @@ app.get("/", (req, res) => {
 app.use("/api/meta", meta);
 
 import title from "./title.js"; 
-
 app.use("/api/title", title);
 
 import keywords from "./keywords.js";
-
 app.use("/api/keywords", keywords);
 
 import faq from "./faq.js";
-
 app.use("/api/faq", faq);
 
 import outline from "./outline.js";
-
 app.use("/api/outline", outline);
 
 import og from "./og.js"; 
-
 app.use("/api/og", og);
+
+import aida from "./aida.js";
+app.use("/api/aida", aida);
 
 
 app.listen(3000, () => console.log("✅ SEO Tools BM API running on port 3000"));
