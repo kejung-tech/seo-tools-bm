@@ -1,5 +1,6 @@
-// File: routes/aida.js
-const express = require('express');
+// File: aida.js
+import express from "express";
+
 const router = express.Router();
 
 // Utility: Generate AIDA structure
@@ -12,8 +13,8 @@ function generateAIDA(keyword, audience = "pembaca umum Malaysia") {
   };
 }
 
-// POST /aida
-router.post('/', (req, res) => {
+// POST /api/aida
+router.post("/", (req, res) => {
   const { keyword, audience } = req.body;
 
   if (!keyword) {
@@ -28,4 +29,4 @@ router.post('/', (req, res) => {
   });
 });
 
-module.exports = router;
+export default router;
