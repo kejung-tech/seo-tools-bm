@@ -20,7 +20,7 @@ Matlamatnya: memudahkan pencipta kandungan menghasilkan artikel yang **mesra SEO
 ## 📦 Installation
 
 ```bash
-git clone [https://github.com/kejung-tech/seo-tools-bm.git]
+git clone https://github.com/kejung-tech/seo-tools-bm.git
 cd seo-tools-bm
 npm install
 
