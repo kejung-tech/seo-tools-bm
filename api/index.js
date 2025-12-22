@@ -26,4 +26,9 @@ import faq from "./faq.js";
 
 app.use("/api/faq", faq);
 
+import outline from "./outline.js";
+
+app.use("/api/outline", outline);
+
+
 app.listen(3000, () => console.log("✅ SEO Tools BM API running on port 3000"));
