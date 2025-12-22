@@ -76,7 +76,7 @@ Branding penuh: Sekejung.com
 
 [x] AIDA copywriting endpoint
 
-[x] Integrasi donation (Buy Me a Coffee, DuitNow QR)
+[x] Donation (Buy Me a Coffee, DuitNow QR)
 
 [ ] Analytics & auto-save history
 
