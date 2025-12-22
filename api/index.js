@@ -24,4 +24,6 @@ app.use("/api/keywords", keywords);
 
 import faq from "./faq.js";
 
+app.use("/api/faq", faq);
+
 app.listen(3000, () => console.log("✅ SEO Tools BM API running on port 3000"));
