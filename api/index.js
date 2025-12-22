@@ -22,4 +22,6 @@ import keywords from "./keywords.js";
 
 app.use("/api/keywords", keywords);
 
+import faq from "./faq.js";
+
 app.listen(3000, () => console.log("✅ SEO Tools BM API running on port 3000"));
