@@ -33,7 +33,7 @@ app.use("/api/outline", outline);
 app.use("/api/og", og);
 app.use("/api/aida", aida);
 app.use("/api/hook", hook);
-app.use("/api/video-script", videoscript);
+app.use("/api/videoscript", videoscript);
 
 // Healthcheck
 app.get("/health", (req, res) => res.json({ ok: true }));
