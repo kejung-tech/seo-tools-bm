@@ -15,15 +15,21 @@ function generateAIDA(keyword, audience = "pembaca umum Malaysia") {
 
 // POST /api/aida
 router.post("/", (req, res) => {
-  const { keyword, audience } = req.body;
+  const { prompt, keyword, audience } = req.body;
 
-  if (!keyword) {
+  // Debug log untuk Render
+  console.log("AIDA request body:", req.body);
+
+  // Fallback: kalau keyword kosong, cuba ambil dari prompt
+  const finalKeyword = keyword || (prompt ? prompt.split(" ")[0] : null);
+
+  if (!finalKeyword) {
     return res.status(400).json({ error: "Keyword diperlukan" });
   }
 
-  const aidaContent = generateAIDA(keyword, audience);
+  const aidaContent = generateAIDA(finalKeyword, audience);
   res.json({
-    keyword,
+    keyword: finalKeyword,
     audience: audience || "pembaca umum Malaysia",
     aida: aidaContent
   });
