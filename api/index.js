@@ -8,7 +8,7 @@ import outline from "./outline.js";
 import og from "./og.js";
 import aida from "./aida.js";
 import hook from "./hook.js";
-import videoScript from "./video-script.js";
+import videoScript from "./videoscript.js";
 
 const app = express();
 
