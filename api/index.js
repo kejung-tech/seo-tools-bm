@@ -7,6 +7,7 @@ import faq from "./faq.js";
 import outline from "./outline.js";
 import og from "./og.js";
 import aida from "./aida.js";
+import hook from "./hook.js";
 
 const app = express();
 
@@ -30,6 +31,7 @@ app.use("/api/faq", faq);
 app.use("/api/outline", outline);
 app.use("/api/og", og);
 app.use("/api/aida", aida);
+app.use("/api/hook", hook);
 
 // Healthcheck
 app.get("/health", (req, res) => res.json({ ok: true }));
