@@ -22,8 +22,8 @@ router.post("/", async (req, res) => {
 `Anda pakar copywriting media sosial.
 
 Tugas:
-- Tulis 7 hook pendek dalam Bahasa Melayu.
-- Sesuai untuk platform: ${platform || "Instagram Reels / TikTok / Facebook /"}.
+- Tulis 5 hook pendek dalam Bahasa Melayu.
+- Sesuai untuk platform: ${platform || "Instagram Reels / TikTok / Facebook / Threads / Youtube Shorts"}.
 - Target: audience Malaysia.
 - Panjang setiap hook: maks 1–2 baris.
 - Gaya: direct, buat orang berhenti scroll, tidak perlu hashtag, gaya penulisan manusia, warga Malaysia.
