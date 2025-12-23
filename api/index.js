@@ -1,36 +1,39 @@
 import express from "express";
 import cors from "cors";
 import meta from "./meta.js";
+import title from "./title.js";
+import keywords from "./keywords.js";
+import faq from "./faq.js";
+import outline from "./outline.js";
+import og from "./og.js";
+import aida from "./aida.js";
 
 const app = express();
-app.use(cors());
+
+// Middleware
 app.use(express.json());
+app.use(cors({
+  origin: ["https://sekejung.com", "https://www.sekejung.com"],
+  methods: ["GET", "POST", "OPTIONS"]
+}));
 
 // Root
 app.get("/", (req, res) => {
   res.send("SEO Tools BM API is running");
 });
 
-// Route meta description
+// Routes
 app.use("/api/meta", meta);
-
-import title from "./title.js"; 
 app.use("/api/title", title);
-
-import keywords from "./keywords.js";
 app.use("/api/keywords", keywords);
-
-import faq from "./faq.js";
 app.use("/api/faq", faq);
-
-import outline from "./outline.js";
 app.use("/api/outline", outline);
-
-import og from "./og.js"; 
 app.use("/api/og", og);
-
-import aida from "./aida.js";
 app.use("/api/aida", aida);
 
+// Healthcheck
+app.get("/health", (req, res) => res.json({ ok: true }));
 
-app.listen(3000, () => console.log("✅ SEO Tools BM API running on port 3000"));
+// Start server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`✅ SEO Tools BM API running on port ${PORT}`));
